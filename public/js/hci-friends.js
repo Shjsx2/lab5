@@ -5,6 +5,15 @@ $(document).ready(function() {
 	initializePage();
 })
 
+
+$(".friends a").click(clickFunction);
+
+function clickFunction(e) {
+	console.log("you clicked");
+	e.preventDefault();
+	console.log($(this).text());
+	$(this).text(anagrammedName($(this).text()));
+}
 /*
  * Function that is called when the document is ready.
  */
